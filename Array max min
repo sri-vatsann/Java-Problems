@@ -1,0 +1,27 @@
+/*Given two arrays of arr1 and arr2, the task is to calculate the product of the maximum element of the first array arr1, and minimum element of the second array arr2.*/
+
+
+
+import java.util.Arrays;
+class Main {
+    public static void main(String[] args) {
+       int [] max = {5,7,9,3,6,2,22};
+       int [] min = {1, 2, 6 , 9,10};
+       int minnum= min[0];
+       int maxnum= max[0];
+       
+       for(int i=0; i<min.length; i++){
+           if(minnum>min[i]){
+               minnum = min[i];
+           }
+       }
+       for(int i =0; i< max.length; i++){
+           if(maxnum<max[i]){
+               maxnum = max[i];
+           }
+       }
+       System.out.println("The max no in max array is:"+ maxnum);
+       System.out.println("The min no in min array is:"+ minnum);
+       System.out.println("Product of maxn and minn:"+ maxnum*minnum);     
+    }
+}
