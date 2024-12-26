@@ -1,0 +1,42 @@
+/* Given a range [L, R]. The task is to find the sum of all the prime numbers in the given range from L to R both inclusive.
+Note: Use sieve of eratosthenes to solve the problem*/
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        System.out.print("Enter lower bound: ");
+        int l = in.nextInt();
+        System.out.print("Enter upper bound: ");
+        int u = in.nextInt();
+        
+        int [] arr = new int [u+1];
+        
+        for(int k=2; k<=u; k++){
+            arr[k]=1;
+        }
+        
+        for(int i = 2; i<=Math.sqrt(u); i++){
+            if(arr[i]==1){
+                for(int j = i*2; j<=u; j=j+i){
+                    arr[j]=0;
+                }
+            }
+        }
+        
+        int sum=0;
+        for(int n=l; n<=u; n++){
+            if(arr[n]==1){
+                sum=sum+n;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+        System.out.print("Sum of prime inside the range: "+sum);
+        
+        
+    }
+}
