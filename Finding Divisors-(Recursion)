@@ -1,0 +1,27 @@
+  // Finding the divisors of the number using recursion method
+
+class Main {
+   public static void main(String[] args) {
+        int n =6;
+        rec(n,1);
+    }
+
+    public static void rec(int n, int v) {
+    if(v<=Math.sqrt(n)){
+        if(n%v ==0){
+            System.out.println(v);
+        }
+
+        rec(n,v+1);
+
+        if(n/v != v){
+            System.out.println(n/v);
+        }
+
+    }else{
+        return;
+    }
+
+    }
+    
+}
