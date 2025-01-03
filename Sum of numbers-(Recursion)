@@ -1,0 +1,17 @@
+// Add the digits in the number using recursion 
+
+class Main {
+    public static void main(String[] args) {
+        int n =34534;
+        System.out.println(fun(n));
+    }
+    public static int fun(int n){
+        if(n == 0) {
+            return 0;
+        }
+        else{
+            return (n%10)+fun(n/10);
+        }
+
+    }
+}
