@@ -1,0 +1,17 @@
+// power of a number using recursion 
+
+class Main {
+    public static void main(String[] args) {
+        int n=5;
+        int p=3;
+
+        System.out.println(rec(n,p));
+    }
+    public static int rec(int n, int p) {
+
+        if (p == 0) {
+            return 1;
+        }
+        return n * rec(n,p-1);
+    }
+}
