@@ -1,0 +1,21 @@
+//Adding array elements using recursion 
+
+class Main {
+    public static void main(String[] args) {
+        int [] arr ={0};
+        System.out.print(fun(arr,0));
+    }
+    
+    public static int fun(int[] arr, int i){
+       int l = arr.length;
+       
+       int sum =0;
+       if(i<l){
+           sum = sum+arr[i];
+       }else{
+           return 0;
+       }
+       
+       return sum+fun(arr,i+1);
+    }
+}
